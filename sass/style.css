@@ -1,0 +1,150 @@
+@import url("https://fonts.cdnfonts.com/css/content");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Content", sans-serif;
+}
+
+figure {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.Wrapper {
+  height: 100vh;
+}
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  position: relative;
+}
+.Sidebar-figure {
+  height: 93px;
+  display: flex;
+  background-color: #0B1020;
+  justify-content: space-between;
+  padding: 1em 2em 1em 2em;
+  z-index: 20;
+}
+.Sidebar-figure-brand {
+  display: flex;
+  gap: 1em;
+}
+.Sidebar-figure-brand-img {
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 12px 34px 0 rgba(109, 94, 252, 0.35);
+  border-radius: 15px;
+}
+.Sidebar-figure-brand-figcaption {
+  color: #E9EEFC;
+}
+.Sidebar-figure-brand-figcaption-title {
+  font-size: 20px;
+}
+.Sidebar-figure-brand-figcaption-baseline {
+  font-size: 13px;
+  color: #A9B4D0;
+}
+.Sidebar-figure-burger {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+}
+.Sidebar-figure-burger-img {
+  cursor: pointer;
+}
+.Sidebar-menuArea {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: calc(100vh - 93px);
+  top: -100vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0B1020;
+  padding-inline: 4em;
+  transition: 0.3s;
+}
+.Sidebar-menuArea.open {
+  top: 93px;
+}
+.Sidebar-menuArea.open .Sidebar-menuArea-addBtn {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  display: none;
+}
+.Sidebar-menuArea-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: #A9B4D0;
+}
+.Sidebar-menuArea-nav-link {
+  min-width: 220px;
+  display: flex;
+  gap: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 8px 24px 0 rgba(15, 23, 42, 0.08);
+  font-size: 14px;
+}
+.Sidebar-menuArea-userBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid white;
+  border-radius: 12px;
+}
+.Sidebar-menuArea-userBox-info {
+  display: flex;
+  gap: 2em;
+}
+.Sidebar-menuArea-userBox-info-img {
+  height: 50px;
+}
+.Sidebar-menuArea-userBox-info-box-name {
+  color: #E9EEFC;
+}
+.Sidebar-menuArea-userBox-info-box-email {
+  color: #A9B4D0;
+}
+.Sidebar-menuArea-userBox-disconnect {
+  text-align: center;
+  background-color: #FF383C;
+  border-radius: 12px;
+  padding: 5px;
+  color: #E9EEFC;
+  box-shadow: 0 12px 34px 0 rgba(109, 94, 252, 0.35);
+}/*# sourceMappingURL=style.css.map */

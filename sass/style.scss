@@ -1,0 +1,155 @@
+@use 'global' as *;
+@use 'variables' as *;
+.Wrapper {
+    height: 100vh;
+    
+   &-header {
+     
+   }
+   &-main {
+
+   }
+ 
+}
+
+.Sidebar {
+    
+    display: flex;
+    flex-direction: column;
+    
+    gap: 4em;
+    position: relative;
+    
+    
+    &-figure {
+        height: $headerHeight;
+        display: flex;
+        background-color: $sidebarBgColor;
+        justify-content: space-between;
+        padding: 1em 2em 1em 2em;
+        z-index: 20;
+        &-brand {
+            display: flex;
+            gap: 1em;
+            &-img {
+            height: 50px;
+            width: 50px;
+            box-shadow: $applyBtnShadow;
+            border-radius: 15px;
+        }
+        &-figcaption {
+            color: $sidebarTextColor;
+            &-title {
+                font-size: 20px;
+            }
+            &-baseline {
+                font-size: $fontSizeSmall;
+                color: $sidebarMutedColor
+            }
+            
+        } 
+        }
+        
+        &-burger  {
+            @include unbuttonize;
+            
+            &-img {
+                cursor: pointer;
+                
+            }
+        }
+    }
+
+    &-menuArea  {
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: calc(100vh - $headerHeight);
+        top: -100vh;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $sidebarBgColor;
+        padding-inline : 4em;
+        transition: .3s;
+        &.open {
+            
+            top: $headerHeight;
+            
+            .Sidebar-menuArea {
+                &-addBtn {
+                 
+                    @include unbuttonize;
+                    display: none;
+                
+                    }  // Selector only 
+                
+                 
+            }
+            
+
+        }
+        &-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            color: $sidebarMutedColor;
+            &-link {
+                min-width: 220px;
+                display: flex;
+                gap: 0.5em;
+                border: $borderColor;
+                background-color: $navBoxColor;
+                border-radius: 12px;
+                padding: 12px;
+                box-shadow: $boxShadow;
+                font-size: $fontSize;
+            }
+            
+        }
+        &-userBox {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: $navBoxColor;
+            border: 1px solid white;
+            border-radius: 12px;
+            &-info {
+                display: flex;
+                gap: 2em;
+                &-img {
+                    
+                    height: 50px;
+                }
+                &-box {
+                    
+                    &-name {
+                        color: $sidebarTextColor;
+                    }
+                    &-email {
+                        color: $sidebarMutedColor;
+                    }
+                }
+            }
+            &-disconnect {
+                text-align: center;
+                background-color: #FF383C;
+                border-radius: 12px;
+                padding: 5px;
+                color: $sidebarTextColor;
+                box-shadow: $applyBtnShadow;
+                
+            }
+        }
+        
+    
+    }
+             
+
+}
+
+   

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sass/style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="Wrapper">
+        <header class="Wrapper-header Sidebar">
+            <!-- Wrapper-header Sidebar-->
+            <figure class="Sidebar-figure">
+                <!-- Sidebar-figure -->
+
+                <div class="Sidebar-figure-brand">
+                    <img src="./assets/logo.png" alt="" class="Sidebar-figure-brand-img">
+                <figcaption class="Sidebar-figure-brand-figcaption">
+                    <p class="Sidebar-figure-brand-figcaption-title">ApplyFlow</p>
+                    <p class="Sidebar-figure-brand-figcaption-baseline">Optimise ta recherche d'emploi</p>
+                </figcaption>
+                </div>
+                
+                <button class="Sidebar-figure-burger "><img src="" alt="">
+                <img src="./assets/downarrow.svg" class="Sidebar-figure-burger-img" alt="">
+                </button>
+            </figure>
+            
+
+            <div class="Sidebar-menuArea">
+                <nav class="Sidebar-menuArea-nav">
+                    <a href="" class="Sidebar-menuArea-nav-link">
+                        <img src="./assets/house.svg" alt="">
+                        <p>Dashboard</p>
+                    </a>
+                    <a href="" class="Sidebar-menuArea-nav-link">
+                        <img src="./assets/briefcase-business.svg" alt="">
+                        <p>Candidatures</p>
+                    </a>
+                   <a href="" class="Sidebar-menuArea-nav-link">
+                        <img src="./assets/calendar-days.svg" alt="">
+                        <p>Calendrier</p>
+                    </a>
+                    <a href="" class="Sidebar-menuArea-nav-link">
+                        <img src="./assets/contact.svg" alt="">
+                        <p>Contacts</p>
+                    </a>
+                   <a href="" class="Sidebar-menuArea-nav-link">
+                        <img src="./assets/resume.svg" alt="">
+                        <p>Lettre de motivation & CV</p>
+                    </a>
+                    <a href="" class="Sidebar-menuArea-nav-link">
+                        <img src="./assets/cog.svg" alt="">
+                        <p>Paramètres</p>
+                    </a>
+                </nav>
+                <button class="Sidebar-menuArea-addBtn ">+ Ajouter une candidature</button>
+                <div class="Sidebar-menuArea-userBox">
+                    <div class="Sidebar-menuArea-userBox-info">
+                        <img src="./assets/userlogo.png" alt="" class="Sidebar-menuArea-userBox-info-img">
+                        <div class="Sidebar-menuArea-userBox-info-box">
+                            <p class="Sidebar-menuArea-userBox-info-box-name">Walid Tools</p>
+                            <p class="Sidebar-menuArea-userBox-info-box-email">walidtools@gmail.com</p>
+                        </div>
+                          
+                    </div>
+                    <a href="" class="Sidebar-menuArea-userBox-disconnect">Se déconnecter</a>
+                </div>
+            </div>
+        </header>
+        <div class="Wrapper-main Candidatures">
+            <!-- Wrapper-main Candidatures-->
+            <header class="Candidatures-header">
+                <!-- Candidatures-header -->
+                <h3 class="Candidatures-header-title"></h3>
+                <div class="Candidatures-header-box">
+                    <figure src="" alt="" class="Candidatures-header-box-notis">
+                        <img src="" alt="" class="Candidatures-header-box-notis-img">
+                        <p class="Candidatures-header-box-notis-count"></p>
+                    </figure>
+                    <button class="Candidatures-header-box-sort">
+                        <img src="" alt="" class="Candidatures-header-box-sort-img">
+                        <p class="Candidatures-header-box-sort-text"></p>
+                    </button>
+                    
+                </div>
+            </header>
+            <main class="Candidatures-listWrapper">
+                <!-- Candidatures-listWrapper  -->
+                <section class="Candidatures-listWrapper-list List wishlist">
+                    <!-- Candidatures-listWrapper-list List wishList -->
+                    <div class="List-header">
+                        <figure class="List-header-figure">
+                            <img class="List-header-figure-img" src="" alt="">
+                            <h3 class="List-header-figure-title"></h3>
+                        </figure>
+                        <p class="List-header-applyCount"></p>
+                    </div>
+                    <div class="List-card Card">
+                        <div class="Card-left">
+                            <p class="Card-left-companyName"></p>
+                            <p class="Card-left-jobTitle"></p>
+                            <div class="Card-left-tags">
+                                <p class="Card-left-tags-tag toApply"></p>
+                                <p class="Card-left-tags-tag toApply"></p>
+                            </div>
+                            <p class="Card-left-dateText"></p>
+                        </div>
+                        <div class="Card-right">
+                            <button class="Card-right-editBtn"></button>
+                            <div class="Card-right-notis">
+                                <img class="Card-right-notis-img"/>
+                                <p class="Card-right-notis-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="Candidatures-listWrapper-list List applied">
+                                        <div class="List-head">
+                        <figure class="List-header-figure">
+                            <img class="List-header-figure-img" src="" alt="">
+                            <h3 class="List-header-figure-title"></h3>
+                        </figure>
+                        <p class="List-header-applyCount"></p>
+                    </div>
+                    <div class="List-card">
+                        <div class="Card-left">
+                            <p class="Card-left-companyName"></p>
+                            <p class="Card-left-jobTitle"></p>
+                            <div class="Card-left-tags">
+                                <p class="Card-left-tags-tag applied"></p>
+                                <p class="Card-left-tags-tag applied"></p>
+                            </div>
+                            <p class="Card-left-dateText"></p>
+                        </div>
+                        <div class="Card-right">
+                            <button class="Card-right-editBtn"></button>
+                            <div class="Card-right-notis">
+                                <img class="Card-right-notis-img"/>
+                                <p class="Card-right-notis-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="Candidatures-listWrapper-list List interview">
+                                        <div class="List-head">
+                        <figure class="List-header-figure">
+                            <img class="List-header-figure-img" src="" alt="">
+                            <h3 class="List-header-figure-title"></h3>
+                        </figure>
+                        <p class="List-header-applyCount"></p>
+                    </div>
+                    <div class="List-card">
+                        <div class="Card-left">
+                            <p class="Card-left-companyName"></p>
+                            <p class="Card-left-jobTitle"></p>
+                            <div class="Card-left-tags">
+                                <p class="Card-left-tags-tag interview"></p>
+                                <p class="Card-left-tags-tag interview"></p>
+                            </div>
+                            <p class="Card-left-dateText"></p>
+                        </div>
+                        <div class="Card-right">
+                            <button class="Card-right-editBtn"></button>
+                            <div class="Card-right-notis">
+                                <img class="Card-right-notis-img"/>
+                                <p class="Card-right-notis-text"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    
+</body>
+</html>
