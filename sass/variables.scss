@@ -1,36 +1,65 @@
 $primaryColor : #2563EB;
 $secondaryColor : #22D3EE;
 
+$hoverLinkColor : rgba(37, 100, 235, 0.152);
+$hoverLinkBorder : 1px solid rgba(37, 100, 235, 0.348);
+
 $sidebarBgColor : #0B1020;
 $sidebarTextColor : #E9EEFC;
 $sidebarMutedColor : #A9B4D0;
 
+
+$ListBgColor : rgba(255,255,255,0.6);
 $sidebarLinkBorder : 1px solid rgba(246, 247, 251, 0.06);
 
-$mainBgColor : #F6F7FB;
+$mainBgColor : #ffffff;
+$mainFontColor : #0F172A;
+$secondaryFontColor : #475569;
+
 $borderColor : 1px solid  rgba(255,255,255, 0.1);
 $navBoxColor :rgba(255,255,255, 0.05);
 
+$borderCard : 1px solid #E6E8F0;
+$cardMutedColor : #667085;
 $boxShadow : 0 8px 24px 0 rgba(15, 23, 42, 0.08);
 $svgShadow : drop-shadow(0 8px 24px rgba(15, 23, 42, 0.08));
-$applyBtnShadow : 0 12px 34px 0 rgba(109, 94, 252, 0.35);
+
 
 $tagToApplyColor : rgba(37, 99, 235, 0.2);
 $tagToApplyBorder : 1px solid rgba(37, 99, 235, 0.35);
 
 $tagAppliedBorder : 1px solid rgba(35, 196, 131, 0.35);
-$tagAppliedColor : 1px solid rgba(35, 196, 131, 0.10);
+$tagAppliedColor :  rgba(35, 196, 131, 0.5);
 
 $tagInterviewBorder : 1px solid rgba(203,48,224, 0.35);
-$tagInterviewColor : 1px solid rgba(203,48,224, 0.10);
+$tagInterviewColor : rgba(203,48,224, 0.10);
 
-$tagPadding :  6px 10px;
-
+$tagPadding :  3px 10px;
+$tagRadius : 100%;
  
+$applyBtnPadding : 8px 32px;
+$applyBtnShadow : 0 12px 34px 0 rgba(109, 94, 252, 0.35);
+$applyBtnRadius : 15px;
 $fontSize : 14px;
 $fontSizeSmall : 13px;
 $fontSizeLabel : 12px;
 $fontSizeHeader : 22px;
 
 $headerHeight: 93px;
+
+
+$mobile : 500px;
+$tablet : 850px;
+$desktop : 1100px;
+
+@mixin mq-desktop {
+    @media screen AND ( min-width : $desktop) {
+        @content;
+    }
+}
+@mixin mq-tablet {
+    @media screen AND ( min-width : $tablet) {
+        @content;
+    }
+}
 

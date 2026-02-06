@@ -26,9 +26,10 @@
                 <img src="./assets/downarrow.svg" class="Sidebar-figure-burger-img" alt="">
                 </button>
             </figure>
-            
 
-            <div class="Sidebar-menuArea">
+
+            <div class="Sidebar-menuArea">             
+                <button class="Sidebar-menuArea-addBtnDesktop">+ Ajouter une candidature</button>
                 <nav class="Sidebar-menuArea-nav">
                     <a href="" class="Sidebar-menuArea-nav-link">
                         <img src="./assets/house.svg" alt="">
@@ -55,7 +56,7 @@
                         <p>Paramètres</p>
                     </a>
                 </nav>
-                <button class="Sidebar-menuArea-addBtn ">+ Ajouter une candidature</button>
+                
                 <div class="Sidebar-menuArea-userBox">
                     <div class="Sidebar-menuArea-userBox-info">
                         <img src="./assets/userlogo.png" alt="" class="Sidebar-menuArea-userBox-info-img">
@@ -71,104 +72,222 @@
         </header>
         <div class="Wrapper-main Candidatures">
             <!-- Wrapper-main Candidatures-->
+            <button class="Wrapper-main-addBtnMobile">+ Ajouter une candidature</button>
             <header class="Candidatures-header">
                 <!-- Candidatures-header -->
-                <h3 class="Candidatures-header-title"></h3>
+                <h3 class="Candidatures-header-title">Candidatures</h3>
                 <div class="Candidatures-header-box">
-                    <figure src="" alt="" class="Candidatures-header-box-notis">
-                        <img src="" alt="" class="Candidatures-header-box-notis-img">
-                        <p class="Candidatures-header-box-notis-count"></p>
+                    <figure  class="Candidatures-header-box-notis">
+                        <img src="./assets/bell.svg" alt="" class="Candidatures-header-box-notis-img">
+                        <div class="Candidatures-header-box-notis-count">10</div>
+                        
                     </figure>
                     <button class="Candidatures-header-box-sort">
-                        <img src="" alt="" class="Candidatures-header-box-sort-img">
-                        <p class="Candidatures-header-box-sort-text"></p>
+                        <img src="./assets/funnel.svg" alt="" class="Candidatures-header-box-sort-img">
+                        <p class="Candidatures-header-box-sort-text">Trier par</p>
+                        <img class="Candidatures-header-box-sort-cta" src="./assets/arrow-sort.svg" alt="">
                     </button>
                     
                 </div>
             </header>
             <main class="Candidatures-listWrapper">
+               
                 <!-- Candidatures-listWrapper  -->
                 <section class="Candidatures-listWrapper-list List wishlist">
                     <!-- Candidatures-listWrapper-list List wishList -->
                     <div class="List-header">
                         <figure class="List-header-figure">
-                            <img class="List-header-figure-img" src="" alt="">
-                            <h3 class="List-header-figure-title"></h3>
+                            <img class="List-header-figure-img" src="./assets/wishlist-dot.svg" alt="">
+                            <h3 class="List-header-figure-title">Wishlist</h3>
                         </figure>
-                        <p class="List-header-applyCount"></p>
+                        <p class="List-header-applyCount">2</p>
                     </div>
+                    <p></p>
                     <div class="List-card Card">
-                        <div class="Card-left">
-                            <p class="Card-left-companyName"></p>
-                            <p class="Card-left-jobTitle"></p>
-                            <div class="Card-left-tags">
-                                <p class="Card-left-tags-tag toApply"></p>
-                                <p class="Card-left-tags-tag toApply"></p>
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">No application yet !</p>
+                                <p class="Card-top-info-jobTitle"> Create your wished job offer.</p> 
                             </div>
-                            <p class="Card-left-dateText"></p>
+                            
                         </div>
-                        <div class="Card-right">
-                            <button class="Card-right-editBtn"></button>
-                            <div class="Card-right-notis">
-                                <img class="Card-right-notis-img"/>
-                                <p class="Card-right-notis-text"></p>
+
+
+                    </div> 
+                    <!-- <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
+                            </div>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag toApply">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
                             </div>
                         </div>
-                    </div>
+                    </div>  -->
                 </section>
                 <section class="Candidatures-listWrapper-list List applied">
-                                        <div class="List-head">
+                    <!-- Candidatures-listWrapper-list List wishList -->
+                    <div class="List-header">
                         <figure class="List-header-figure">
-                            <img class="List-header-figure-img" src="" alt="">
-                            <h3 class="List-header-figure-title"></h3>
+                            <img class="List-header-figure-img" src="./assets/applied-dot.svg" alt="">
+                            <h3 class="List-header-figure-title">Applied</h3>
                         </figure>
-                        <p class="List-header-applyCount"></p>
+                        <p class="List-header-applyCount">2</p>
                     </div>
-                    <div class="List-card">
-                        <div class="Card-left">
-                            <p class="Card-left-companyName"></p>
-                            <p class="Card-left-jobTitle"></p>
-                            <div class="Card-left-tags">
-                                <p class="Card-left-tags-tag applied"></p>
-                                <p class="Card-left-tags-tag applied"></p>
+                    <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
                             </div>
-                            <p class="Card-left-dateText"></p>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
                         </div>
-                        <div class="Card-right">
-                            <button class="Card-right-editBtn"></button>
-                            <div class="Card-right-notis">
-                                <img class="Card-right-notis-img"/>
-                                <p class="Card-right-notis-text"></p>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag applied">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 
+                                        <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
+                            </div>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag applied">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
+                            </div>
+                        </div>
+                    </div> 
+                                        <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
+                            </div>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag applied">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
+                            </div>
+                        </div>
+                    </div> 
+                                        <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
+                            </div>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag applied">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
+                            </div>
+                        </div>
+                    </div> 
+                                        <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
+                            </div>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
+                        </div>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag applied">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
+                            </div>
+                        </div>
+                    </div> 
                 </section>
                 <section class="Candidatures-listWrapper-list List interview">
-                                        <div class="List-head">
+                    
+                    <div class="List-header">
                         <figure class="List-header-figure">
-                            <img class="List-header-figure-img" src="" alt="">
-                            <h3 class="List-header-figure-title"></h3>
+                            <img class="List-header-figure-img" src="./assets/interview-dot.svg" alt="">
+                            <h3 class="List-header-figure-title">interview</h3>
                         </figure>
-                        <p class="List-header-applyCount"></p>
+                        <p class="List-header-applyCount">2</p>
                     </div>
-                    <div class="List-card">
-                        <div class="Card-left">
-                            <p class="Card-left-companyName"></p>
-                            <p class="Card-left-jobTitle"></p>
-                            <div class="Card-left-tags">
-                                <p class="Card-left-tags-tag interview"></p>
-                                <p class="Card-left-tags-tag interview"></p>
+                    <div class="List-card Card">
+                        <div class="Card-top">
+                            <div class="Card-top-info">
+                                <p class="Card-top-info-companyName">Dassault</p>
+                                <p class="Card-top-info-jobTitle">Backend Engineer</p> 
                             </div>
-                            <p class="Card-left-dateText"></p>
+                            <button class="Card-right-editBtn">
+                                <img src="./assets/ellipsis-btn.png" alt="">
+                            </button>
                         </div>
-                        <div class="Card-right">
-                            <button class="Card-right-editBtn"></button>
-                            <div class="Card-right-notis">
-                                <img class="Card-right-notis-img"/>
-                                <p class="Card-right-notis-text"></p>
+                        <div class="Card-middle">
+                                <p class="Card-middle-tag toApply">A Postuler</p>
+                                <p class="Card-middle-tag">Remote</p>
+                        </div>
+                        <div class="Card-bottom">
+                            <p class="Card-bottom-dateText">Envoyé il y a 3 j.</p>
+                            <div class="Card-bottom-notis">
+                                <img src="./assets/bell-small.svg" class="Card-right-notis-img"/>
+                                <p class="Card-bottom-notis-text">A rappeler dans 3j.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </section>
             </main>
 

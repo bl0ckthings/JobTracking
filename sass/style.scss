@@ -2,9 +2,13 @@
 @use 'variables' as *;
 .Wrapper {
     height: 100vh;
-    
+    display: grid;
+    grid-template-columns: 1fr;
+    @include mq-desktop {
+        grid-template-columns: 280px 1fr;
+    }
    &-header {
-     
+    
    }
    &-main {
 
@@ -16,18 +20,30 @@
     
     display: flex;
     flex-direction: column;
-    
-    gap: 4em;
     position: relative;
+   
     
+     @include mq-desktop {
+        gap: 2em;
+        background-color: $sidebarBgColor;
+        height: 100vh;
+        position: fixed;
+     }
     
     &-figure {
+        
         height: $headerHeight;
         display: flex;
         background-color: $sidebarBgColor;
         justify-content: space-between;
-        padding: 1em 2em 1em 2em;
+        padding: 1em;
         z-index: 20;
+        position: fixed;
+        width: 100%;
+        @include mq-desktop {
+            position: static;
+            
+        }
         &-brand {
             display: flex;
             gap: 1em;
@@ -36,15 +52,27 @@
             width: 50px;
             box-shadow: $applyBtnShadow;
             border-radius: 15px;
+            @include mq-desktop {
+                height: 70px;
+            width: 70px;
+            }
         }
         &-figcaption {
             color: $sidebarTextColor;
             &-title {
                 font-size: 20px;
+                @include mq-desktop {
+                    font-size: $fontSizeHeader;
+                    font-weight: bold;
+                }
             }
             &-baseline {
                 font-size: $fontSizeSmall;
-                color: $sidebarMutedColor
+                color: $sidebarMutedColor;
+                @include mq-desktop {
+                    font-size: $fontSizeLabel;
+                   
+                }
             }
             
         } 
@@ -52,7 +80,9 @@
         
         &-burger  {
             @include unbuttonize;
-            
+            @include mq-desktop {
+                display: none;
+            }
             &-img {
                 cursor: pointer;
                 
@@ -62,7 +92,7 @@
 
     &-menuArea  {
         box-sizing: border-box;
-        position: absolute;
+        position: fixed;
         z-index: 10;
         width: 100%;
         height: calc(100vh - $headerHeight);
@@ -74,6 +104,13 @@
         background-color: $sidebarBgColor;
         padding-inline : 4em;
         transition: .3s;
+        @include mq-desktop {
+            position: static;
+            height: 100%;
+            padding-inline: 1em;
+            gap: 2em;
+        
+        }
         &.open {
             
             top: $headerHeight;
@@ -106,8 +143,31 @@
                 padding: 12px;
                 box-shadow: $boxShadow;
                 font-size: $fontSize;
+                &:hover {
+                    background-color: $hoverLinkColor;
+                    border: $hoverLinkBorder;
+                }
+                @include mq-desktop {
+                    font-size: $fontSizeLabel
+                }
             }
             
+            
+        }
+        &-addBtnDesktop {
+        @include unbuttonize;
+        cursor: pointer;
+        background-color: $primaryColor;
+        border-radius: $applyBtnRadius;
+        box-shadow: $applyBtnShadow;
+        padding: $applyBtnPadding;
+        color: $sidebarTextColor;
+            display: none;
+            @include mq-desktop {
+                display: block;
+                font-size: $fontSizeSmall;
+                text-align: center;
+            }  
         }
         &-userBox {
             display: flex;
@@ -116,7 +176,7 @@
             padding: 10px;
             margin-bottom: 20px;
             background-color: $navBoxColor;
-            border: 1px solid white;
+            border: 1px solid rgba(255, 255, 255, 0.083);
             border-radius: 12px;
             &-info {
                 display: flex;
@@ -132,6 +192,9 @@
                     }
                     &-email {
                         color: $sidebarMutedColor;
+                        @include mq-desktop {
+                    font-size: $fontSizeLabel
+                }
                     }
                 }
             }
@@ -142,7 +205,14 @@
                 padding: 5px;
                 color: $sidebarTextColor;
                 box-shadow: $applyBtnShadow;
-                
+                @include mq-desktop {
+                    background-color: transparent;
+                    border-radius: 0;
+                    box-shadow: inherit;
+                    padding: 0;
+                    text-decoration: underline;
+                    font-size: $fontSizeLabel;
+                }
             }
         }
         
@@ -152,4 +222,263 @@
 
 }
 
-   
+.Wrapper-main {
+    margin-top: $headerHeight;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include mq-desktop {
+        margin-top: 0px;
+       
+        grid-column: 2 /3 ;
+    } 
+    &-addBtnMobile {
+        @include unbuttonize;
+        cursor: pointer;
+        position: fixed;
+        bottom: 10px;
+        align-self: center;
+        background-color: $primaryColor;
+        border-radius: $applyBtnRadius;
+        box-shadow: $applyBtnShadow;
+        padding: $applyBtnPadding;
+        color: $sidebarTextColor;
+        @include mq-desktop {
+            display: none;
+        }
+        
+    }
+
+}
+
+.Candidatures {
+    
+    padding-inline: 2em;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-box {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            &-notis {
+                position: relative;
+                height: 24px;
+                &-count {
+                     right: 0;
+                    bottom: 12px;
+                    font-size: 10px;
+                    text-align: center;
+                    color: $mainBgColor;
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background-color: red;
+                    border-radius: 50%;
+                }
+                &-img {
+                    height: 24px;
+                    cursor: pointer;
+                }
+            }
+            &-sort {
+                @include unbuttonize;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                border: $borderCard;
+                padding: 0.5em 0.5em;
+                border-radius: 8px;
+                gap: 1em;
+                &-img {
+                    height: 20px;
+                }
+                &-text {
+                    font-size: $fontSize;
+                    color: #020617;
+                }
+                &-cta {
+                    height: 16px;
+                    
+                }
+
+            }
+        }
+    }
+    &-listWrapper {
+        @include mq-desktop {
+        display: flex;
+        gap: 1em;
+        align-items: flex-start;
+        }
+       
+
+    } 
+    .List {
+        padding: 0 1em 2em;
+        border: $borderCard;
+        border-radius: 12px;
+        margin-bottom:1em;
+        background-color: $ListBgColor;
+        box-shadow: $boxShadow;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        @include mq-desktop {
+            flex-grow: 1;
+            
+        }
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-figure {
+                display: flex;
+                gap: 1em;
+                &-title {
+                    font-size: $fontSize;
+                }
+            }
+            &-applyCount {
+                border: $borderCard;
+                border-radius: 100%;
+                width: 1.5em;
+                height: 1.5em;
+                text-align: center;
+                color: $secondaryFontColor ;
+                font-size: $fontSizeSmall;
+                
+            }
+        }
+       
+        .Card {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1em;
+            border: $borderCard;
+            box-shadow: $boxShadow;
+            border-radius: 16px;
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                &-info {
+                    &-companyName {
+                        font-weight: bold;
+                        font-size: $fontSize;
+                    }
+                    &-jobTitle {
+                        font-size: $fontSizeSmall;
+                        color : $cardMutedColor;
+                    } 
+                }
+            }
+            &-middle {
+                display: flex;
+                gap: 0.5em;
+                &-tag {
+                        
+                    
+                    font-size: $fontSizeLabel;
+                    padding: $tagPadding;
+                    border: $borderCard;
+                    border-radius: 50px;
+
+                    
+                    &.toApply {
+                    border: $tagToApplyBorder;
+                    background-color: $tagToApplyColor;
+                    }
+                    &.applied {
+                        border: $tagAppliedBorder;
+                        background-color: $tagAppliedColor;
+                    }
+                    // Descendants ##############################
+                    
+                }
+            }
+             &-bottom {
+                display: flex;
+                justify-content: space-between;
+                
+                &-dateText {
+                    color : $cardMutedColor;
+                    font-size: $fontSizeLabel;
+                }
+                &-notis {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em;
+                    color: $cardMutedColor;
+                    font-size: $fontSizeLabel;
+                    &-img {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+             }
+            &-left {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                &-info {
+                    &-companyName {
+                        font-weight: bold;
+                        font-size: $fontSize;
+                    }
+                    &-jobTitle {
+                        font-size: $fontSizeSmall;
+                        color : $cardMutedColor;
+                    } 
+                }
+                &-tags {
+                    display: flex;
+                    gap: 1em;
+                   
+                    &-tag {
+                        
+                    
+                    font-size: $fontSizeLabel;
+                    padding: $tagPadding;
+                    border: $borderCard;
+                    border-radius: 50px;
+                    }
+                    .toApply {
+                    border: $tagToApplyBorder;
+                    background-color: $tagToApplyColor;
+                    }
+                   
+                }
+                &-dateText {
+                    color : $cardMutedColor;
+                    font-size: $fontSizeLabel;
+                }
+            }
+
+            &-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+                &-editBtn {
+                    @include unbuttonize;
+                    cursor: pointer;
+                }
+                &-notis {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em;
+                    color: $cardMutedColor;
+                    font-size: $fontSizeLabel;
+                    &-img {
+                        height: 18px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+} 
+
